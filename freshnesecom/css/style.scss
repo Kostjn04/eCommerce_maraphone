@@ -1,4 +1,4 @@
- @import url("normalize.min.css");
+@import url("normalize.min.css");
 
 //  ! Переменные
 @import "parts/vars";
@@ -13,3 +13,27 @@
 
 // !Шапка
 @import "parts/header";
+
+//!  aside
+@import "parts/aside";
+
+// ! main
+@import "parts/main";
+
+// ! banner
+@import "parts/banner";
+
+// ! card
+@import "parts/card";
+
+// ! blog card
+@import "parts/blog-card";
+
+// ! section title
+@import "parts/components/section-title";
+
+// ! footer
+@import "parts/footer";
+
+// ! popular products
+@import "parts/populars";

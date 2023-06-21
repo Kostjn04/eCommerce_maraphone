@@ -1,168 +1,208 @@
 .header {
-    // !header__top
-    &__top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-top: 16px;
-        padding-bottom: 12px;
+  // !header__top
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-bottom: 12px;
 
-        &-list {
-            display: flex;
-            align-items: center;
-            justify-content:space-between;
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        &-item {
-            margin-right: 33px;
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-
-        &-link {
-            font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,  'Helvetica Neue', sans-serif;
-            font-size: 12px;
-            text-decoration: none;
-            color:$accent;
-            display: inline-block;
-
-            &:hover{
-                text-decoration: underline;
-            }
-        }
-
-    }
-    // !Почта и телефон в шапке
-    &__mail,
-    &__phone {
-        color:$dark;
+    &-list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
     }
 
-    &__middle {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-top: 25px;
-        padding-bottom: 40px;
+    &-item {
+      margin-right: 33px;
+      &:last-child {
+        margin-right: 0;
+      }
     }
 
-    &__button {
-        border: none;
-        position: relative;
+    &-link {
+      font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+        Cantarell, "Helvetica Neue", sans-serif;
+      font-size: 12px;
+      text-decoration: none;
+      color: $accent;
+      display: inline-block;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
+  }
+  // !Почта и телефон в шапке
+  &__mail,
+  &__phone {
+    color: $dark;
+  }
 
-    // !header search
-    &__search {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 500px;
-        padding: 5px 15px;
-        border-radius: 12px;
-        border-width: 1px;
-        border-style: solid;
-        border-color: lighten($dark,75%);
+  &__middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 40px;
+  }
+
+  &__button {
+    border: none;
+    background-color: transparent;
+    position: relative;
+  }
+
+  // !header search
+  &__search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 500px;
+    padding: 5px 15px;
+    border-radius: 12px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: lighten($dark, 75%);
+  }
+
+  .input__search {
+    width: 100%;
+    height: 30px;
+    padding-right: 40px;
+    border: none;
+    font-size: 14px;
+
+    &::placeholder {
+      color: lighten($dark, 25%);
     }
+  }
 
-    .input__search {
-        width: 100%;
-        height: 30px;
-        padding-right: 40px;
-        border: none;
-        font-size: 14px;
+  .product {
+    &-list {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      width: 130px;
+      position: relative;
 
-        &::placeholder {
-            color:lighten($dark,25%)
-        }
-    }
-
-    .product {
-        &-list {
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
-            width: 130px;
-            position: relative;
-            
-            &::after {
-                content: "";
-                position: absolute;
-                height: 100%;
-                width: 1px;
-                display: inline-block;
-                background-color: lighten($dark,75%);
-                right: -15px;
-                top: 0;
-            }
-        }
-
-
-        &-item {
-            font-size: 15px;
-            font-weight: 700;
-            color:$dark;
-            line-height: 23px;
-            position: relative;
-
-            .icon-down-open {
-                position: absolute;
-                right: 0;
-                top:50%;
-                transform: translateY(-50%);
-                color: $accent;
-                font-size: 12px;
-                @include dfcc;
-            }
-        }
-
-    }
-
-
-    .search__wrap {
-        width: 310px;
-        position: relative;
-    }
-
-    .search__icon {
+      &::after {
+        content: "";
         position: absolute;
-        top:50%;
-        right: 7px;
-        transform: translateY(-90%);
-        width: 16px;
-        height: 16px;
+        height: 100%;
+        width: 1px;
+        display: inline-block;
+        background-color: lighten($dark, 75%);
+        right: -15px;
+        top: 0;
+      }
     }
-        
+
+    &-item {
+      font-size: 15px;
+      font-weight: 700;
+      color: $dark;
+      line-height: 23px;
+      position: relative;
+
+      .icon-down-open {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $accent;
+        font-size: 12px;
+        @include dfcc;
+      }
+    }
+  }
+
+  .search__wrap {
+    width: 310px;
+    position: relative;
+  }
+
+  .search__icon {
+    position: absolute;
+    top: 50%;
+    right: 7px;
+    transform: translateY(-90%);
+    width: 16px;
+    height: 16px;
+  }
+  //! Header buttom
+  &__bottom {
+    background-color: #f9f9f9;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  &__wrapper {
+    display: flex;
+  }
+  .category-link ~ .category-sublist {
+    //* ~ означает,что category-link должна
+    //*искать соседний класс и выпонять над ним действия
+    display: none;
+  }
+
+  .category-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .category-link {
+    display: flex;
+    color: $dark;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .category-list {
+    margin-right: 40px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .category-link .search-arrow {
+    width: 12px;
+    height: 12px;
+    font-size: 12px;
+    color: #6a983c;
+    display: inline-block;
+  }
 }
 
-   // !Счетчик товаров
-   .card-counter {
-    background-color: $secondary-accent;
-    color:white;
-    display: flex;
-     align-items: center;
-    justify-content: center;
-    height: 18px;
-    width: 18px;
-    font-weight: 600;
-    border-radius: 50%;
-    font-size: 12px;
-    position: absolute;
-    left: 35px;
-    bottom: 5px;
+// !Счетчик товаров
+.card-counter {
+  background-color: $secondary-accent;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 18px;
+  width: 18px;
+  font-weight: 600;
+  border-radius: 50%;
+  font-size: 12px;
+  position: absolute;
+  left: 35px;
+  bottom: 5px;
 }
 
 .logo {
-    text-decoration: none;
-    color:$dark;
-    font-family: 'Poppins',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 900;
-    font-size: 20px;
+  text-decoration: none;
+  color: $dark;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 900;
+  font-size: 20px;
 
-    &:hover {
-        text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
+  }
 }
